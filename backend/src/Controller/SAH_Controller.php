@@ -19,11 +19,11 @@ class SAH_Controller extends AbstractController
  $result = $this->connection->fetchOne($sql);
  // Si no hay mensaje en la BD, devolver un mensaje de error
  if (!$result) {
- return $this->json(['secretosSAH' => 'No messages found in the database!']);
+ return $this->json(['message' => 'No messages found in the database!']);
  }
  else{
 $result = 'Backend Operativo, respuesta de la BD: ' . $result;
-return $this->json(['secretosSAH' => $result]);
+return $this->json(['message' => $result]);
 }
  }
 }
